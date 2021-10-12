@@ -13,6 +13,7 @@ class LocationListViewController: UIViewController {
     @IBOutlet weak var editBarButton: UIBarButtonItem!
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     
+    //check
     var weatherLocations: [WeatherLocation] = []
     var selectedLocationIndex = 0
     
