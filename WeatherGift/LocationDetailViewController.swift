@@ -60,7 +60,7 @@ class LocationDetailViewController: UIViewController {
         
         pageViewController.setViewControllers([pageViewController.createLocationDetailViewController(forPage: locationIndex)], direction: .forward, animated: false, completion: nil)
        }
-    }
+    
     @IBAction func pageControlTapped(_ sender: UIPageControl) {
         let pageViewController = UIApplication.shared.windows.first!.rootViewController as!
             PageViewController
@@ -72,7 +72,7 @@ class LocationDetailViewController: UIViewController {
         
         pageViewController.setViewControllers([pageViewController.createLocationDetailViewController(forPage: sender.currentPage)], direction: direction, animated: true, completion: nil)
     }
-
+}
 
 
 
