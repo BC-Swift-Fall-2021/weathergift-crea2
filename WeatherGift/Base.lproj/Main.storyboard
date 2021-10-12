@@ -115,6 +115,18 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="About" id="gPF-xl-rj9"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xWh-EZ-Dwv"/>
+                                    <barButtonItem style="plain" id="OoM-3j-mZF">
+                                        <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="MLl-Re-8Zh">
+                                            <rect key="frame" x="88" y="8" width="143" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="pageIndicatorTintColor" systemColor="systemTealColor"/>
+                                            <color key="currentPageIndicatorTintColor" systemColor="labelColor"/>
+                                            <connections>
+                                                <action selector="pageControlTapped:" destination="uw5-Vp-xu1" eventType="valueChanged" id="U1L-mG-U4C"/>
+                                            </connections>
+                                        </pageControl>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Elw-Vt-bRp"/>
                                     <barButtonItem image="list.bullet" catalog="system" id="pXC-19-weE">
                                         <connections>
@@ -180,6 +192,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="NYT-ps-uFd" id="jrb-Tx-qiX"/>
                         <outlet property="imageView" destination="gAf-9M-pl1" id="gHj-7f-YwX"/>
+                        <outlet property="pageControl" destination="MLl-Re-8Zh" id="5uK-HF-ZGn"/>
                         <outlet property="placeLabel" destination="IYc-S0-ouQ" id="PkR-8r-oEo"/>
                         <outlet property="summaryLabel" destination="5Cp-ld-Um5" id="Ujj-6v-LIX"/>
                         <outlet property="temperatureLabel" destination="hec-E1-EBM" id="hqz-Bc-nep"/>
@@ -193,6 +206,9 @@
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
