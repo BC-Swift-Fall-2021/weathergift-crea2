@@ -15,18 +15,17 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var weatherLocation: WeatherLocation!
-    var weatherLocations: [WeatherLocation] = []
+    var locationIndex = 0 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if weatherLocation == nil {
-            weatherLocation = WeatherLocation(name: "Current Location", latitude: 0.0, longitude: 0.0)
-            weatherLocations.append(weatherLocation)
-        }
-
      updaterUserInterface()
     }
+    
     func updaterUserInterface() {
+        let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
+        weatherLocation = pageViewController.weatherLocations[locationIndex]
+        
         dateLabel.text = ""
         placeLabel.text = weatherLocation.name
         temperatureLabel.text = "__°"
@@ -35,14 +34,40 @@ class LocationDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! LocationListViewController
-        destination.weatherLocations = weatherLocations
+        func updaterUserInterface() {
+            let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
+            weatherLocation = pageViewController.weatherLocations[locationIndex]
+            destination.weatherLocations = pageViewController.weatherLocations
     }
-    
-    @IBAction func unwindFromLocationListViewController(segue: UIStoryboardSegue) {
+    // need to fix
+       @IBAction func unwindFromLocationListViewController(segue: UIStoryboardSegue) {
         let source = segue.source as! LocationListViewController
-        weatherLocations = source.weatherLocations
-        weatherLocation = weatherLocations[source.selectedLocationIndex]
-        updaterUserInterface()
+        locationIndex = source.selectedLocationIndex
+        
+        let pageViewController = UIApplication.shared.windows.first!.rootViewController as!
+            PageViewController
+        pageViewController.weatherLocations = source.weatherLocations
+        
+        pageViewController.setViewControllers([pageViewController.createLocationDetailViewController(forPage: locationIndex)], direction: .forward, animated: false, completion: nil)
+       }
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
