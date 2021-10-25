@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831FC668272637AA004C67B7 /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FC667272637AA004C67B7 /* DailyTableViewCell.swift */; };
 		838E94A627123CE300F1B994 /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E94A527123CE300F1B994 /* APIkeys.swift */; };
 		83A19D982715C1020025ABED /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19D972715C1020025ABED /* PageViewController.swift */; };
 		83A19D9E2715FDA80025ABED /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19D9D2715FDA80025ABED /* WeatherDetail.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		831FC667272637AA004C67B7 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
 		838E94A527123CE300F1B994 /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
 		83A19D972715C1020025ABED /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		83A19D9D2715FDA80025ABED /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				83A19D9D2715FDA80025ABED /* WeatherDetail.swift */,
 				83A19D972715C1020025ABED /* PageViewController.swift */,
 				83CBF55F270F3AA6003C389B /* LocationListViewController.swift */,
+				831FC667272637AA004C67B7 /* DailyTableViewCell.swift */,
 				83CBF561270F3AA6003C389B /* Main.storyboard */,
 				83CBF564270F3AA7003C389B /* Assets.xcassets */,
 				83CBF566270F3AA7003C389B /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831FC668272637AA004C67B7 /* DailyTableViewCell.swift in Sources */,
 				83CBF560270F3AA6003C389B /* LocationListViewController.swift in Sources */,
 				83A19D9E2715FDA80025ABED /* WeatherDetail.swift in Sources */,
 				83A19D982715C1020025ABED /* PageViewController.swift in Sources */,
