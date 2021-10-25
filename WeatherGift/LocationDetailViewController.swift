@@ -87,9 +87,11 @@ class LocationDetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowList" {
             let destination = segue.destination as! LocationListViewController
             let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
             destination.weatherLocations = pageViewController.weatherLocations
+       }
     }
     // need to fix, probably 6.7
        @IBAction func unwindFromLocationListViewController(segue: UIStoryboardSegue) {

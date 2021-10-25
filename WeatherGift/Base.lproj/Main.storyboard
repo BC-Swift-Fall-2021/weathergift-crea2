@@ -116,7 +116,11 @@
                                     <constraint firstAttribute="height" constant="44" id="hPM-4t-9MT"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="About" id="gPF-xl-rj9"/>
+                                    <barButtonItem title="About" id="gPF-xl-rj9">
+                                        <connections>
+                                            <segue destination="twT-9X-Pyq" kind="presentation" id="rze-VO-2X8"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xWh-EZ-Dwv"/>
                                     <barButtonItem style="plain" id="OoM-3j-mZF">
                                         <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="MLl-Re-8Zh">
@@ -286,10 +290,82 @@
             </objects>
             <point key="canvasLocation" x="-967.5" y="76.056338028169009"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="49y-hN-kXR">
+            <objects>
+                <viewController id="twT-9X-Pyq" customClass="AboutViewController" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaf-PM-spb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxe-CU-ff3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeatherGift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps1-as-LQD">
+                                        <rect key="frame" x="26" y="8" width="268" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="64"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clear-day" translatesAutoresizingMaskIntoConstraints="NO" id="NeE-Od-EhG">
+                                        <rect key="frame" x="8" y="104" width="304" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="powered_by_openweather" translatesAutoresizingMaskIntoConstraints="NO" id="cGs-JI-DHa">
+                                        <rect key="frame" x="8" y="424" width="148" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWo-MX-rTi">
+                                        <rect key="frame" x="8" y="334" width="304" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <string key="text">Made for You by 
+Chris</string>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="powered_by_google_on_white" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-eK-CjY">
+                                        <rect key="frame" x="164" y="424" width="148" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Q0-av-xN9">
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KSp-t7-VUW"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Done" id="xYk-NR-lkw"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zi9-JD-dtH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Q0-av-xN9" firstAttribute="leading" secondItem="Zi9-JD-dtH" secondAttribute="leading" id="4IH-Vw-r0V"/>
+                            <constraint firstItem="Zi9-JD-dtH" firstAttribute="bottom" secondItem="9Q0-av-xN9" secondAttribute="bottom" id="7nP-zS-61O"/>
+                            <constraint firstItem="9Q0-av-xN9" firstAttribute="trailing" secondItem="Zi9-JD-dtH" secondAttribute="trailing" id="91v-Vo-ZMa"/>
+                            <constraint firstItem="Zi9-JD-dtH" firstAttribute="trailing" secondItem="kxe-CU-ff3" secondAttribute="trailing" id="chj-47-kRk"/>
+                            <constraint firstItem="kxe-CU-ff3" firstAttribute="top" secondItem="Zi9-JD-dtH" secondAttribute="top" id="nPu-VS-hS6"/>
+                            <constraint firstItem="9Q0-av-xN9" firstAttribute="top" secondItem="kxe-CU-ff3" secondAttribute="bottom" id="ohy-G4-vy5"/>
+                            <constraint firstItem="kxe-CU-ff3" firstAttribute="leading" secondItem="Zi9-JD-dtH" secondAttribute="leading" id="vGG-zA-Hls"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vx0-8T-ysA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-969" y="943"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="clear-day" width="272" height="186"/>
         <image name="cloud.fill" catalog="system" width="128" height="88"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="powered_by_google_on_white" width="144" height="18"/>
+        <image name="powered_by_openweather" width="468" height="228"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
