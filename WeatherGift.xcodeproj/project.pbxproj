@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		831FC668272637AA004C67B7 /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FC667272637AA004C67B7 /* DailyTableViewCell.swift */; };
+		831FC66A27272425004C67B7 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FC66927272425004C67B7 /* HourlyCollectionViewCell.swift */; };
 		838E94A627123CE300F1B994 /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E94A527123CE300F1B994 /* APIkeys.swift */; };
 		83A19D982715C1020025ABED /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19D972715C1020025ABED /* PageViewController.swift */; };
 		83A19D9E2715FDA80025ABED /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19D9D2715FDA80025ABED /* WeatherDetail.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		831FC667272637AA004C67B7 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
+		831FC66927272425004C67B7 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		838E94A527123CE300F1B994 /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
 		83A19D972715C1020025ABED /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		83A19D9D2715FDA80025ABED /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				83A19D972715C1020025ABED /* PageViewController.swift */,
 				83CBF55F270F3AA6003C389B /* LocationListViewController.swift */,
 				831FC667272637AA004C67B7 /* DailyTableViewCell.swift */,
+				831FC66927272425004C67B7 /* HourlyCollectionViewCell.swift */,
 				83CBF561270F3AA6003C389B /* Main.storyboard */,
 				83CBF564270F3AA7003C389B /* Assets.xcassets */,
 				83CBF566270F3AA7003C389B /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 				83CBF55C270F3AA6003C389B /* AppDelegate.swift in Sources */,
 				83A5B3D62715383500B85B43 /* LocationDetailViewController.swift in Sources */,
 				83CBF55E270F3AA6003C389B /* SceneDelegate.swift in Sources */,
+				831FC66A27272425004C67B7 /* HourlyCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
